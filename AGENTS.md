@@ -31,7 +31,7 @@ Available custom agents are located in `.github/agents/`:
 |-------|------|---------|----------------|----------|
 | Code Reviewer | `code-reviewer.agent.md` | `@code-reviewer` | code-quality, java-language | Reviewing code quality, refactoring, best practices |
 | Architect | `architect.agent.md` | `@architect` | hexagonal-architecture, adr-compliance | Validating architecture, checking boundaries, ADR alignment |
-| Security Analyst | `security.agent.md` | `@security` | security-review | Security audit, vulnerability assessment, secrets detection |
+| Security Analyst | `security.agent.md` | `@security` | security-review, data-privacy | Security audit, vulnerability assessment, secrets detection, PII detection, GDPR compliance, consent management, data retention, data anonymisation |
 | Test Specialist | `tester.agent.md` | `@tester` | testing, java-language, hexagonal-architecture | Writing tests, test strategy, coverage analysis |
 | Commit Guide | `commit-guide.agent.md` | `@commit-guide` | conventional-commits, changesets | Creating commit messages, staging strategy, changeset generation |
 | Story Writer | `story-writer.agent.md` | `@story-writer` | user-story-writing | Writing user stories, acceptance criteria, and task breakdowns |
@@ -470,7 +470,7 @@ Result:
 Each agent knows which skills to load from .github/skills/
 Code Reviewer → loads code-quality, java-language
 Architect → loads hexagonal-architecture, adr-compliance
-Security → loads security-review
+Security → loads security-review, data-privacy
 Tester → loads testing, java-language, hexagonal-architecture
 Commit Guide → loads conventional-commits
 ```
