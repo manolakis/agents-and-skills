@@ -1,25 +1,31 @@
 ---
 name: user-story-writing
 description: Write effective user stories that capture requirements from the user's perspective. Create clear stories with detailed acceptance criteria to guide development and define done.
+metadata:
+    version: 1.0.0
+    auto-invoke:
+        - Writing user stories
+        - Backlog refinement
+        - Translating requirements into tasks
 ---
 
 # User Story Writing Skill
 
 This skill defines the standards and workflow for creating high-quality user stories with clear acceptance criteria and actionable tasks.
 
-## Critical Rules
+# Critical rules
 
 These rules are non-negotiable and must be applied to every user story.
 
 1. **Every story must have a repository reference** — "Related to:" field is mandatory
 2. **Acceptance criteria must be testable** — Each criterion must be objectively verifiable (not "looks good" or "feels right")
-3. **Tasks must be 1-3 day efforts** — If a task is larger, split it into smaller subtasks
-4. **Titles must be action-oriented** — Use gerunds or imperative verbs (Export, Filter, Enable, Allow)
+3. **Tasks must be 1-3 day efforts** — If a task is larger, split it into smaller tasks
+4. **Titles must be action-oriented** — Use imperative verbs (Export, Filter, Enable, Allow)
 5. **Descriptions must include context** — Answer: "What?" "Why?" and "Who benefits?"
 6. **No acceptance criteria should be vague** — Replace "should be fast" with "complete within 5 minutes"
 7. **Tasks must be independently implementable** — A developer should be able to pick any task without depending on another
 
-## Workflow
+# Workflow
 
 Follow these steps in order when creating a user story:
 
@@ -48,12 +54,14 @@ Generate 4-8 criteria following this pattern:
 - Include performance, security, or compliance criteria if applicable
 
 ### Step 5: Identify Proposed Tasks
-Break the story into 5-8 tasks by ownership and dependency:
+Break the story into 5-8 tasks by ownership and scope:
 - Frontend/UI tasks
 - Backend/API tasks
 - Testing tasks
 - Documentation tasks
 - Compliance/Security tasks (if applicable)
+
+Avoid hard dependencies between tasks; if ordering is required, keep tasks independently implementable and note any sequence explicitly.
 
 Each task title: `[Component]: [Action]`
 Each task description: 1-2 sentences with scope
@@ -61,7 +69,49 @@ Each task description: 1-2 sentences with scope
 ### Step 6: Assign Repository
 Always include "Related to:" field. If user doesn't specify, default to `agents-and-skills`.
 
-## Decision Trees
+---
+
+# Reporting format
+
+Always report the generated user story in the following Markdown format:
+
+```
+Agent: story-writer
+Skills Applied: [user-story-writing]
+
+**Title:** <Short title>
+**Description:**
+<Full description of goal, context, and scope>
+**Acceptance Criteria:**
+1. <Criterion 1>
+2. <Criterion 2>
+3. ...
+**Related to:** <repository: agents-and-skills> (or the specified repo)
+**Proposed Tasks:**
+- [ ] <Task 1: short title> — <Task description>
+- [ ] <Task 2: short title> — <Task description>
+```
+
+## Templates
+
+Short template (for quick tickets):
+
+```
+Title: <short>
+Description: <1-2 sentences>
+Criteria: 1) ... 2) ...
+Related to: agents-and-skills
+```
+
+Given/When/Then criteria template:
+
+```
+Given <context>
+When <action>
+Then <expected result>
+```
+
+# Decision trees
 
 ### When to split a story into multiple stories
 
@@ -99,7 +149,7 @@ Can this task be completed, tested, and merged in 1-3 days?
        ├─ "Write OAuth2 integration tests"
 ```
 
-## Examples
+# Examples
 
 ### Example 1: Export Personal Data
 
@@ -172,7 +222,7 @@ Allow users to apply multiple tags simultaneously when searching or browsing res
 
 ---
 
-## Notes
+# Notes
 
 - User stories are a communication tool between Product and Engineering
 - Acceptance criteria are the "definition of done" for a story

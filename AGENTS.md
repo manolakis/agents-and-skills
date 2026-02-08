@@ -34,6 +34,7 @@ Available custom agents are located in `.github/agents/`:
 | Security Analyst | `security.agent.md` | `@security` | security-review | Security audit, vulnerability assessment, secrets detection |
 | Test Specialist | `tester.agent.md` | `@tester` | testing, java-language, hexagonal-architecture | Writing tests, test strategy, coverage analysis |
 | Commit Guide | `commit-guide.agent.md` | `@commit-guide` | conventional-commits, changesets | Creating commit messages, staging strategy, changeset generation |
+| Story Writer | `story-writer.agent.md` | `@story-writer` | user-story-writing | Writing user stories, acceptance criteria, and task breakdowns |
 
 All skills are located in `.github/skills/` as `SKILL.md` files within named subdirectories.
 

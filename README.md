@@ -16,7 +16,7 @@ This repository defines a lightweight agent system for coordinating specialised 
 
 ## How It Works
 
-1. A user issues a request such as @code-reviewer or @security.
+1. A user issues a request such as @code-reviewer, @security, or @story-writer.
 2. The agent loads its required skills from .github/skills/.
 3. The agent reviews the target changes and reports findings in a standard format.
 4. If needed, the agent recommends escalation to another specialist.
